@@ -302,6 +302,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .phones__note { margin: 0; color: var(--muted); font-size: 15px; align-self: center; padding-left: 12px; }
 .outcome { margin-top: clamp(32px, 4vw, 48px); padding: 24px 26px; border-radius: var(--r); background: var(--accent-soft); border: 1px solid var(--line); }
 .outcome p { margin: 0; color: var(--ink-strong); }
+.project--mini { margin-top: clamp(72px, 9vw, 120px); padding-top: clamp(48px, 6vw, 72px); border-top: 1px solid var(--line); }
+.project--mini .project__title { font-size: clamp(32px, 4.6vw, 54px); }
+.project__links { flex-direction: row; flex-wrap: wrap; }
+.mini__shots { display: grid; grid-template-columns: 1fr minmax(0, 230px); gap: 20px; align-items: end; }
+.mini__shots .phone { width: 100%; }
 .more-note { margin-top: 40px; text-align: center; color: var(--muted); font-size: 14.5px; }
 
 /* ---------- Certifications ---------- */
@@ -392,6 +397,8 @@ a.clink:hover, button.clink:hover { background: rgba(204, 255, 255, .12); border
   .project__body, .gallery, .ticks--2 { grid-template-columns: 1fr; }
   .project__body .pcol:last-child { grid-column: auto; }
   .phones { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .mini__shots { grid-template-columns: 1fr; }
+  .mini__shots .phone { width: 60%; justify-self: center; }
   .phone { border-width: 4px; border-radius: 18px; }
   .phones__note { grid-column: 1 / -1; padding: 6px 0 0; }
   .stats { gap: 10px; }

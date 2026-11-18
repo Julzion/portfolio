@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaskFlow | Task Board</title>
+  <meta name="description" content="TaskFlow: a simple drag-and-drop task board built with HTML, CSS and JavaScript." />
+  <meta name="theme-color" content="#003366" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">TF</span><div><h1>TaskFlow</h1><p>Plan it, move it, finish it.</p></div></div>
+    <div class="progress-box" aria-label="Progress">
+      <span id="progressText">0% done</span>
+      <div class="progress"><i id="progressBar"></i></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <form class="add" id="addForm" autocomplete="off">
+      <input id="taskInput" maxlength="90" placeholder="What needs to be done?" aria-label="Task title" required />
+      <select id="prioInput" aria-label="Priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <input id="dueInput" type="date" aria-label="Due date (optional)" />
+      <button class="btn btn--primary" type="submit">Add task</button>
+    </form>
+
+    <div class="board">
+      <section class="col" data-status="todo">
+        <header><h2>To do</h2><span class="count" data-count="todo">0</span></header>
+        <ul class="list" data-list="todo"></ul>
+      </section>
+      <section class="col" data-status="doing">
+        <header><h2>In progress</h2><span class="count" data-count="doing">0</span></header>
+        <ul class="list" data-list="doing"></ul>
+      </section>
+      <section class="col" data-status="done">
+        <header><h2>Done</h2><span class="count" data-count="done">0</span><button class="link-btn" id="clearDone" type="button">Clear</button></header>
+        <ul class="list" data-list="done"></ul>
+      </section>
+    </div>
+    <p class="note">Drag cards between columns, or use the arrow buttons. Tasks are saved in this browser.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

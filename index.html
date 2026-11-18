@@ -67,7 +67,7 @@
           <p class="sr-only">I'm a BSIT student, a web developer, the co-developer of EmploySmart, and an experienced encoder and office staff member.</p>
           <p class="hero__lede">Information Technology student at NEUST and <strong>co-developer of EmploySmart</strong>, a job-placement platform for local government. Before IT, I spent two years encoding records and serving clients, so I build with the end user in mind.</p>
           <div class="hero__cta">
-            <a href="#projects" class="btn btn--primary">View my project <span aria-hidden="true">→</span></a>
+            <a href="#projects" class="btn btn--primary">View my projects <span aria-hidden="true">→</span></a>
             <a href="#contact" class="btn btn--ghost">Contact me</a>
           </div>
           <ul class="hero__meta">
@@ -122,6 +122,7 @@
               <div><dt class="mono">Full name</dt><dd>Brian Jules C. Asuncion</dd></div>
               <div><dt class="mono">Location</dt><dd>Nueva Ecija, Philippines</dd></div>
               <div><dt class="mono">Languages</dt><dd>Filipino, English</dd></div>
+              <div><dt class="mono">GitHub</dt><dd><a href="https://github.com/Julzion" target="_blank" rel="noopener">@Julzion</a></dd></div>
               <div><dt class="mono">Status</dt><dd>Available for OJT</dd></div>
             </dl>
           </div>
@@ -142,7 +143,7 @@
       <div class="stats">
         <div class="stat reveal"><span class="stat__num" data-count="2">2</span><span class="stat__label">Years of office &amp; client-service work</span></div>
         <div class="stat reveal"><span class="stat__num" data-count="75">75</span><span class="stat__label">Hours of JobReady training</span></div>
-        <div class="stat reveal"><span class="stat__num" data-count="5">5</span><span class="stat__label">User roles in EmploySmart</span></div>
+        <div class="stat reveal"><span class="stat__num" data-count="3">3</span><span class="stat__label">Projects with live demos &amp; source</span></div>
         <div class="stat reveal"><span class="stat__num" data-count="1">1</span><span class="stat__label">Industry certificate earned</span></div>
       </div>
     </section>
@@ -270,7 +271,101 @@
         </div>
       </article>
 
-      <p class="more-note reveal">More projects will be added here as they are completed.</p>
+      <!-- ========== PROJECT 2 ========== -->
+      <article class="project project--mini" id="p-clientdesk">
+        <div class="project__head reveal">
+          <div>
+            <p class="mono kicker">Personal project · Records management · Web app</p>
+            <h3 class="project__title">ClientDesk</h3>
+            <p class="project__sum">A client records and policy renewal manager inspired by my work as an insurance encoder. It flags which policies are active, due soon or expired.</p>
+          </div>
+          <div class="project__links">
+            <a class="btn btn--primary" href="projects/clientdesk/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a class="btn" href="https://github.com/Julzion/portfolio/tree/main/projects/clientdesk" target="_blank" rel="noopener">Source code ↗</a>
+          </div>
+        </div>
+
+        <div class="mini__shots">
+          <figure class="shot reveal">
+            <div class="shot__bar"><i></i><i></i><i></i><span>projects/clientdesk</span></div>
+            <button class="shot__btn" data-full="img/cd-desktop.webp" aria-label="Enlarge: ClientDesk on desktop"><img src="img/cd-desktop.webp" alt="ClientDesk dashboard with client counts by status and a table of clients with renewal dates" loading="lazy" width="1600" height="840" /></button>
+            <figcaption>Client list with status badges, search and filters</figcaption>
+          </figure>
+          <button class="phone reveal" data-full="img/cd-mobile.webp" aria-label="Enlarge: ClientDesk on a phone"><img src="img/cd-mobile.webp" alt="ClientDesk on a phone, with client records shown as stacked cards" loading="lazy" width="600" height="1298" /></button>
+        </div>
+
+        <div class="project__body">
+          <div class="pcol reveal">
+            <h4 class="mono label">Overview</h4>
+            <p>Add, edit, search and delete client records with policy type, policy number, contact number and renewal date. A summary row counts active, due-soon and expired policies.</p>
+            <h4 class="mono label">Problem addressed</h4>
+            <p>At the insurance office, renewals were tracked by hand, which made it easy to miss clients whose policies were about to lapse.</p>
+          </div>
+          <div class="pcol reveal">
+            <h4 class="mono label">Objectives</h4>
+            <ul class="ticks">
+              <li>Keep client records in one searchable list</li>
+              <li>Automatically flag policies due within 30 days or already expired</li>
+              <li>Validate input and block duplicate policy numbers</li>
+              <li>Export records to CSV for Excel</li>
+            </ul>
+          </div>
+          <div class="pcol reveal">
+            <h4 class="mono label">Technologies used</h4>
+            <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>localStorage</li><li>Responsive design</li></ul>
+            <h4 class="mono label">What I built</h4>
+            <p>The full app: the record form with validation, status logic based on renewal dates, search and filtering, CSV export, and a layout that turns the table into cards on phones.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== PROJECT 3 ========== -->
+      <article class="project project--mini" id="p-taskflow">
+        <div class="project__head reveal">
+          <div>
+            <p class="mono kicker">Personal project · Productivity · Web app</p>
+            <h3 class="project__title">TaskFlow</h3>
+            <p class="project__sum">A drag-and-drop task board with To do, In progress and Done columns, priorities, due dates and a progress bar.</p>
+          </div>
+          <div class="project__links">
+            <a class="btn btn--primary" href="projects/taskflow/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a class="btn" href="https://github.com/Julzion/portfolio/tree/main/projects/taskflow" target="_blank" rel="noopener">Source code ↗</a>
+          </div>
+        </div>
+
+        <div class="mini__shots">
+          <figure class="shot reveal">
+            <div class="shot__bar"><i></i><i></i><i></i><span>projects/taskflow</span></div>
+            <button class="shot__btn" data-full="img/tf-desktop.webp" aria-label="Enlarge: TaskFlow on desktop"><img src="img/tf-desktop.webp" alt="TaskFlow board with three columns of task cards and a progress bar" loading="lazy" width="1600" height="640" /></button>
+            <figcaption>Three-column board with priorities and due dates</figcaption>
+          </figure>
+          <button class="phone reveal" data-full="img/tf-mobile.webp" aria-label="Enlarge: TaskFlow on a phone"><img src="img/tf-mobile.webp" alt="TaskFlow on a phone with columns stacked vertically" loading="lazy" width="600" height="1298" /></button>
+        </div>
+
+        <div class="project__body">
+          <div class="pcol reveal">
+            <h4 class="mono label">Overview</h4>
+            <p>Add tasks with a priority and optional due date, then drag them between columns or move them with arrow buttons. Overdue tasks are highlighted and completed ones can be cleared in one click.</p>
+            <h4 class="mono label">Problem addressed</h4>
+            <p>Juggling school requirements, OJT preparation and project work is easier when every task and its status is visible in one place.</p>
+          </div>
+          <div class="pcol reveal">
+            <h4 class="mono label">Objectives</h4>
+            <ul class="ticks">
+              <li>Move tasks between stages with drag and drop</li>
+              <li>Offer button controls for phones and keyboard users</li>
+              <li>Sort by priority and due date, and flag overdue tasks</li>
+              <li>Save the board so it stays after a refresh</li>
+            </ul>
+          </div>
+          <div class="pcol reveal">
+            <h4 class="mono label">Technologies used</h4>
+            <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Drag and Drop API</li><li>localStorage</li></ul>
+            <h4 class="mono label">What I built</h4>
+            <p>The full app: the add-task form, drag-and-drop between columns, priority and due-date sorting, the progress bar, and the saved board state.</p>
+          </div>
+        </div>
+      </article>
     </section>
 
     <!-- ============ CERTIFICATIONS ============ -->
@@ -339,6 +434,11 @@
           <span class="log__date mono">Nov 2026</span>
           <div><h3>Completed Wadhwani JobReady (With AI), Advanced Level</h3><p>75 hours of employability training and in-class application through NEUST.</p></div>
           <span class="log__tag mono">Training</span>
+        </li>
+        <li class="log__item reveal">
+          <span class="log__date mono">Nov 2026</span>
+          <div><h3>Built ClientDesk and TaskFlow</h3><p>Two web apps with live demos and source code on GitHub: a client records and renewals manager, and a drag-and-drop task board.</p></div>
+          <span class="log__tag mono">Projects</span>
         </li>
         <li class="log__item reveal">
           <span class="log__date mono">2026</span>

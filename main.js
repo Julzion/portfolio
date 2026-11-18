@@ -1,11 +1,11 @@
 /* ==========================================================
    CONTACT DETAILS — edit these, then redeploy.
-   Leave a value as "" to show it as "to be added".
+   Leave a value as "" to hide it from the page.
    ========================================================== */
 const CONTACT = {
-  email: "",     // e.g. "brian@example.com"
+  email: "brianjulesasuncion@gmail.com",
   phone: "",     // e.g. "+63 912 345 6789"
-  github: "",    // e.g. "https://github.com/username"
+  github: "https://github.com/Julzion",
   linkedin: "",  // e.g. "https://www.linkedin.com/in/username"
 };
 
@@ -157,19 +157,12 @@ Object.keys(LABELS).forEach((key) => {
   const value = (CONTACT[key] || "").trim();
   const inner = (sub) => `<span class="clink__icon">${ICONS[key]}</span><span><b>${LABELS[key]}</b><small>${sub}</small></span>`;
   let el;
-  if (!value) {
-    el = document.createElement("div");
-    el.className = "clink clink--empty";
-    el.innerHTML = inner("To be added");
-  } else if (key === "email") {
-    el = document.createElement("button");
-    el.type = "button";
+  if (!value) return;
+  if (key === "email") {
+    el = document.createElement("a");
     el.className = "clink";
-    el.innerHTML = inner(escapeHtml(value) + " · click to copy");
-    el.addEventListener("click", async () => {
-      try { await navigator.clipboard.writeText(value); showToast("Email copied to clipboard"); }
-      catch (e) { location.href = "mailto:" + value; }
-    });
+    el.href = "mailto:" + value;
+    el.innerHTML = inner(escapeHtml(value));
   } else {
     el = document.createElement("a");
     el.className = "clink";

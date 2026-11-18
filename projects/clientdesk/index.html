@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClientDesk | Client Records &amp; Renewals</title>
+  <meta name="description" content="ClientDesk: a simple client records and policy renewal manager built with HTML, CSS and JavaScript." />
+  <meta name="theme-color" content="#003366" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">CD</span><div><h1>ClientDesk</h1><p>Client records &amp; policy renewals</p></div></div>
+    <div class="top__actions">
+      <button class="btn btn--ghost" id="exportBtn" type="button">Export CSV</button>
+      <button class="btn btn--primary" id="newBtn" type="button">+ New client</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="stats" aria-label="Summary">
+      <div class="stat"><span id="statTotal">0</span><small>Total clients</small></div>
+      <div class="stat stat--ok"><span id="statActive">0</span><small>Active</small></div>
+      <div class="stat stat--warn"><span id="statDue">0</span><small>Due within 30 days</small></div>
+      <div class="stat stat--bad"><span id="statExpired">0</span><small>Expired</small></div>
+    </section>
+
+    <section class="panel">
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="Search by name, policy no. or contact" aria-label="Search clients" />
+        <select id="filter" aria-label="Filter by status">
+          <option value="all">All statuses</option>
+          <option value="active">Active</option>
+          <option value="due">Due soon</option>
+          <option value="expired">Expired</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Client</th><th>Policy</th><th>Contact</th><th>Renewal date</th><th>Status</th><th><span class="sr-only">Actions</span></th></tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p class="empty" id="empty" hidden>No clients match your search.</p>
+      </div>
+    </section>
+    <p class="note">Demo app: all data is fictional and saved only in this browser.</p>
+  </main>
+
+  <dialog id="dialog" aria-labelledby="dlgTitle">
+    <form id="form" method="dialog" novalidate>
+      <h2 id="dlgTitle">New client</h2>
+      <input type="hidden" name="id" />
+      <label>Full name<input name="name" required maxlength="80" autocomplete="off" /></label>
+      <div class="grid2">
+        <label>Policy type
+          <select name="type" required>
+            <option value="">Select…</option>
+            <option>Life</option><option>Health</option><option>Motor</option><option>Property</option><option>Travel</option>
+          </select>
+        </label>
+        <label>Policy no.<input name="policy" required maxlength="20" autocomplete="off" /></label>
+      </div>
+      <div class="grid2">
+        <label>Contact number<input name="contact" required inputmode="tel" maxlength="20" placeholder="09XX XXX XXXX" /></label>
+        <label>Renewal date<input name="renewal" type="date" required /></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3" maxlength="300"></textarea></label>
+      <p class="form-error" id="formError" role="alert"></p>
+      <div class="dlg__actions">
+        <button class="btn btn--ghost" type="button" id="cancelBtn">Cancel</button>
+        <button class="btn btn--primary" type="submit">Save client</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
