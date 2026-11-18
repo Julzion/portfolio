@@ -14,6 +14,10 @@ Home · About Me · Technical Skills · Projects · Certifications & Training ·
 | ClientDesk | Client records & policy renewal manager | [Demo](https://brian-jules-asuncion.vercel.app/projects/clientdesk/) | [projects/clientdesk](projects/clientdesk) |
 | TaskFlow | Drag-and-drop task board | [Demo](https://brian-jules-asuncion.vercel.app/projects/taskflow/) | [projects/taskflow](projects/taskflow) |
 
+## Certifications
+- **Information Technology Specialist: HTML and CSS** — Certiport / Pearson / CertNexus, awarded October 29, 2026 (verify code `axua-s4qu` at verify.certiport.com)
+- **Employability Skills: JobReady (With AI) v1, Advanced Level** — Wadhwani Foundation, November 05, 2026
+
 ## Built with
 HTML5, CSS3 and vanilla JavaScript. No frameworks or build step. Deployed on Vercel.
 

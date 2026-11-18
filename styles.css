@@ -201,6 +201,12 @@ svg { width: 20px; height: 20px; flex: none; }
 .cert__status--done { background: #DDF5E9; color: #1B7A4E; }
 .cert--soon { grid-template-columns: 90px 1fr; border-style: dashed; border-color: var(--steel); }
 .cert__icon { display: grid; place-items: center; width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, var(--navy), var(--steel)); color: var(--ice); font: 700 26px var(--f-head); }
+.cert__meta { margin: 0 0 14px; display: grid; gap: 6px; }
+.cert__meta div { display: grid; grid-template-columns: 140px 1fr; gap: 10px; font-size: 15px; }
+.cert__meta dt { color: var(--muted); font-weight: 600; }
+.cert__meta dd { margin: 0; color: var(--head); font-weight: 600; }
+.cert__meta code { padding: 2px 8px; border-radius: 6px; background: var(--chip); color: var(--chip-ink); font-size: 14px; }
+.cert__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .text-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; text-decoration: none; }
 .text-link svg { width: 15px; height: 15px; }
 .text-link:hover { text-decoration: underline; }
@@ -264,7 +270,7 @@ dialog { color: var(--ink); }
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
   .welcome { grid-template-columns: 1fr; }
-  .highlights { grid-template-columns: repeat(3, 1fr); }
+  .highlights { grid-template-columns: repeat(4, 1fr); }
   .about, .contact { grid-template-columns: 1fr; }
 }
 @media (max-width: 900px) {
@@ -283,6 +289,7 @@ dialog { color: var(--ink); }
   .side__status { margin: 14px 0 12px; }
   .side__nav a.is-active::before { display: none; }
   .main { margin-left: 0; padding-top: 20px; }
+  .highlights { grid-template-columns: repeat(2, 1fr); }
   .block { scroll-margin-top: 70px; }
   .welcome { scroll-margin-top: 90px; }
 }
@@ -290,6 +297,7 @@ dialog { color: var(--ink); }
   .highlights { grid-template-columns: 1fr; }
   .highlights li { flex-direction: row; align-items: baseline; gap: 10px; }
   .cert, .cert--soon { grid-template-columns: 1fr; }
+  .cert__meta div { grid-template-columns: 1fr; gap: 0; }
   .pd__grid { grid-template-columns: 1fr; }
   .tline { padding-left: 52px; }
   .tline::before { left: 17px; }
